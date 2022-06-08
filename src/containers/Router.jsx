@@ -1,19 +1,17 @@
-import { createBrowserHistory } from 'history';
-import { Redirect } from 'react-router-dom';
-import { Route, Switch, Router as BrowserRouter } from 'react-router-dom';
-import Dashboard from './dashboard/Dashboard';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
-const history = createBrowserHistory();
+// PAGES:
+import Characters from './characters';
+import CharacterDetails from './characters/details';
 
 const Router = () => {
 	return (
-		<BrowserRouter history={history}>
-			<Switch>
-				<Route exact component={Dashboard} path="/" />
+		<Switch>
+			<Route exact component={Characters} path="/" />
+			<Route component={CharacterDetails} path="/:id" />
 
-				<Redirect to="/" />
-			</Switch>
-		</BrowserRouter>
+			<Redirect to="/" />
+		</Switch>
 	);
 };
 

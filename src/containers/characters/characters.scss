@@ -1,0 +1,10 @@
+
+.characters {
+	min-height: 100vh;
+	background-color: #202329;
+
+	&__characters-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
