@@ -1,10 +1,32 @@
-
 .characters {
-	min-height: 100vh;
-	background-color: #202329;
-
 	&__characters-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		gap: 15px;
+	}
+
+	&__filter {
+		display: flex;
+		margin-bottom: 15px;
+
+		span {
+			color: #ffffff;
+			margin-top: 25px;
+		}
+
+		&-search {
+			width: 100%;
+			margin: 15px;
+			font-size: 14px;
+			outline: none;
+		}
+	}
+
+	&__filter-select {
+		margin: 15px;
+		width: 100%;
+		padding: 10px;
+		font-size: 14px;
+		outline: none;
 	}
 }

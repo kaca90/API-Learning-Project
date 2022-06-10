@@ -1,15 +1,16 @@
 import ReactQueryProvider from 'components/providers/ReactQueryProvider';
+import Layout from 'components/layout/Layout';
 import Router from 'containers/Router';
 import { BrowserRouter } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 
-const history = createBrowserHistory();
 const App = () => {
 	return (
 		<div className="App">
-			<BrowserRouter history={history}>
+			<BrowserRouter>
 				<ReactQueryProvider>
-					<Router />
+					<Layout>
+						<Router />
+					</Layout>
 				</ReactQueryProvider>
 			</BrowserRouter>
 		</div>

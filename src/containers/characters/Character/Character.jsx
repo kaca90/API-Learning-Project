@@ -1,5 +1,4 @@
 import './Character.scss';
-
 import { Link } from 'react-router-dom';
 
 const Character = ({ id, name, status, species, origin, location, image }) => {

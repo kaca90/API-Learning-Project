@@ -1,0 +1,21 @@
+.header{
+    padding: 15px;
+    width: 100%;
+
+    &-nav{
+        background-color: #3b3e43;
+    }
+    ul{
+        li{
+            display: inline-block;
+            padding: 10px; 
+            color: #ffffff;
+            text-transform: uppercase;
+           
+        }
+
+        li:hover{
+            background-color: #202329;
+        }
+    }
+}

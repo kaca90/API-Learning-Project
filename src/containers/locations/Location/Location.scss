@@ -1,0 +1,22 @@
+.locations__location{
+    $el: &;
+    background-color: #3b3e43;
+	color: #f5f5f5;
+	border-radius: 10px;
+	overflow: hidden;
+    padding: 10px 15px;
+
+    &-name{
+        color: #fff;
+		text-decoration: none;
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 8px;
+    }
+
+    #{$el}-type,
+    #{$el}-dimension{
+        padding: 5px;
+    }
+
+}
