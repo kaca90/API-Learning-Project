@@ -12,3 +12,9 @@ export const getSingleCharacter = async (id) =>
 		url: `/character/${id}`,
 		method: 'GET',
 	});
+
+export const getAllEpisodes = async (params) =>
+	request({
+		url: `/episode/`,
+		method: 'GET',
+	});

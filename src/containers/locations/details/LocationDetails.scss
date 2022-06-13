@@ -1,21 +1,17 @@
-.location-details__location{
-    $el: &;
-    margin: 50px 50px 0;
-    border-radius: 10px;
+.location-details__location {
+	$el: &;
+	margin: 50px 50px 0;
+	border-radius: 10px;
 	overflow: hidden;
-    background-color: #3b3e43;
+	background-color: #3b3e43;
 
-    &-content{
-        padding: 25px;
+	&-content {
+		padding: 25px;
 		color: #f5f5f5;
 
-        // &-name {
-        //     font-size: 27px;
-        //     font-weight: bold;   
-        // }   
-
-        &-type{
-        padding: 10px;   
-        }
-    }  
+		#{$el}-type,
+		#{$el}-dimension {
+			padding: 5px;
+		}
+	}
 }

@@ -1,11 +1,11 @@
-import './Locations.scss';
-import Location from './Location/Location';
+import './Episodes.scss';
+import Episode from './Episode/Episode';
+import { useEpisodes } from './useEpisodes';
 import { FormikProvider, useFormik } from 'formik';
-import { useLocations } from './useLocations';
 import FormikSearchInputField from 'components/form/search/FormikSearchInputField';
 import { useDebounce } from 'utils/hooks/useDebounce';
 
-const Locations = () => {
+const Episodes = () => {
 	const formik = useFormik({
 		initialValues: {
 			name: '',
@@ -19,21 +19,21 @@ const Locations = () => {
 		name: useDebounce(values.name),
 	};
 
-	const { locations } = useLocations(debouncedValues);
+	const { episodes } = useEpisodes(debouncedValues);
 
 	return (
-		<div className="locations">
+		<div className="episodes">
 			<div className="container">
-				<div className="locations__filter">
+				<div className="episodes__filter">
 					<FormikProvider value={formik}>
-						<span>Search by Location Name:</span>
-						<FormikSearchInputField className="locations__filter-search" name="name" />
+						<span>Search by Episode Name:</span>
+						<FormikSearchInputField className="episodes__filter-search" name="name" />
 					</FormikProvider>
 				</div>
 
-				<div className="locations__locations-grid">
-					{locations?.map((location) => (
-						<Location key={location.id} {...location} />
+				<div className="episodes__episodes-grid">
+					{episodes?.map((episode) => (
+						<Episode key={episode.id} {...episode} />
 					))}
 				</div>
 			</div>
@@ -41,4 +41,4 @@ const Locations = () => {
 	);
 };
 
-export default Locations;
+export default Episodes;

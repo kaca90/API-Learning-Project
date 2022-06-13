@@ -3,9 +3,16 @@ import { getAllLocations } from 'api/location';
 
 export const useLocations = (values) => {
 	const { data: locations, status: locationsStatus } = useQuery(['all-locations', values], async () => {
-		const { data } = await getAllLocations();
+		const { data } = await getAllLocations(values);
 		return data.results;
 	});
 
-	return { locations, locationsStatus };
+	const nameOptions = [
+		{
+			value: '',
+			input: 'text',
+		},
+	];
+
+	return { locations, locationsStatus, nameOptions };
 };

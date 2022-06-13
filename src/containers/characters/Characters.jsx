@@ -1,5 +1,5 @@
 import './Characters.scss';
-import DashobardCharacter from './Character/Character';
+import Character from './Character/Character';
 import { FormikProvider, useFormik } from 'formik';
 import FormikSelectField from 'components/form/FormikSelectField/FormikSelectField';
 import { useCharacters } from './useCharacters';
@@ -42,7 +42,7 @@ const Characters = () => {
 
 				<div className="characters__characters-grid">
 					{characters?.map((character) => (
-						<DashobardCharacter key={character.id} {...character} />
+						<Character key={character.id} {...character} />
 					))}
 				</div>
 			</div>

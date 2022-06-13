@@ -2,10 +2,7 @@ import { useQuery } from 'react-query';
 import { getAllCharacters } from 'api/character';
 
 export const useCharacters = (values) => {
-	const {
-		data: characters,
-		status: charactersStatus,
-	} = useQuery(['all-characters', values], async () => {
+	const { data: characters, status: charactersStatus } = useQuery(['all-characters', values], async () => {
 		const { data } = await getAllCharacters(values);
 		return data.results;
 	});
