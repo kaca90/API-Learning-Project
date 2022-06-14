@@ -3,26 +3,20 @@ import { getSingleLocation } from 'api/location';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import '../details/LocationDetails.scss';
 
+import LocationResidents from './LocationResidents';
+
 const LocationDetails = () => {
+	// location
 	const { locationId } = useParams();
 	const { data: location } = useQuery(['single-location', locationId], async () => {
 		const { data } = await getSingleLocation(locationId);
 		return data;
 	});
 
-	// const residentId = location?.residents.url.replace('https://rickandmortyapi.com/api/location/', '');
-
-	// const { data: location } = useQuery(
-	// 	['single-location', locationId],
-	// 	async () => {
-	// 		const { data } = await getSingleLocation(locationId);
-	// 		return data;
-	// 	},
-	// 	{
-	// 		enabled: Boolean(locationId),
-	// 	}
-	// );
-
+	// resident
+	const residentsIds = location?.residents.map((resident) =>
+		resident.replace('https://rickandmortyapi.com/api/character/', '')
+	);
 
 	return (
 		<>
@@ -38,13 +32,9 @@ const LocationDetails = () => {
 			{/* residents */}
 			<div className="location-details__residents">
 				<div className="location-details__residents-content">
-					<h2 className="location-details__residents-name">{location?.residents}</h2>
-					
+					<div className="location-details__residents-grid">{<LocationResidents residentsIds={residentsIds} />}</div>
 				</div>
-
 			</div>
-
-
 		</>
 	);
 };

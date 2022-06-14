@@ -13,8 +13,8 @@ export const getSingleCharacter = async (id) =>
 		method: 'GET',
 	});
 
-export const getAllEpisodes = async (params) =>
+export const getMultipleCharacters = async (ids) =>
 	request({
-		url: `/episode/`,
+		url: `/character/${ids.join(',')}`,
 		method: 'GET',
 	});

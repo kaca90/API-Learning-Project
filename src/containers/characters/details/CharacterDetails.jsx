@@ -6,12 +6,16 @@ import '../details/CharacterDetails.scss';
 import { Link } from 'react-router-dom';
 
 const CharacterDetails = () => {
+
+	// character
 	const { characterId } = useParams();
 
 	const { data: character } = useQuery(['single-character', characterId], async () => {
 		const { data } = await getSingleCharacter(characterId);
 		return data;
 	});
+
+	// location
 	const locationId = character?.location.url.replace('https://rickandmortyapi.com/api/location/', '');
 
 	const { data: location } = useQuery(
@@ -49,6 +53,7 @@ const CharacterDetails = () => {
 			{/* character-details__location */}
 			<div className="character-details__location">
 				<div className="character-details__location-content">
+					{/* <h3>Character location: </h3> */}
 					<Link to={`/locations/${locationId}`} className="character-details__location-name">
 						{location?.name}
 					</Link>

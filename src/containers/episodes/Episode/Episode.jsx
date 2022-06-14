@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Episode.scss';
 
 const Episode = ({ id, name, air_date, episode }) => {

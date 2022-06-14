@@ -15,3 +15,23 @@
 		}
 	}
 }
+
+.location-details__residents {
+	$el: &;
+	margin: 50px 50px 0;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #3b3e43;
+
+	&-content {
+		padding: 25px;
+		color: #f5f5f5;
+
+		// #{$el}-grid {
+		// 	display: grid;
+		// 	grid-template-columns: repeat(3, 1fr);
+		// 	gap: 25px;
+		// 	padding: 10px;
+		// }
+	}
+}
