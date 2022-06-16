@@ -1,7 +1,6 @@
-.location__residents {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-   
+.episode__characters {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 
 	&-character {
 		$el: &;
@@ -22,6 +21,7 @@
 				object-fit: cover;
 			}
 		}
+
 
 		&-name {
 			color: #fff;

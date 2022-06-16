@@ -1,14 +1,11 @@
 .episodes{
     &__episodes-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 15px;
 		color: #fff;
 	}
 
 	&__filter {
 		display: flex;
-		margin-bottom: 15px;
+		margin: 15px;
 
 		span {
 			color: #ffffff;

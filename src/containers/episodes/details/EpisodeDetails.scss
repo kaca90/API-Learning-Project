@@ -1,0 +1,31 @@
+.episode-details__episode {
+	$el: &;
+	margin: 50px 50px 0;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #3b3e43;
+
+	&-content {
+		padding: 25px;
+		color: #f5f5f5;
+
+		#{$el}-air_date-name,
+		#{$el}-episode-name {
+			padding: 5px;
+		}
+	}
+}
+
+.episode-details_caracters {
+	margin: 50px 50px 0;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #3b3e43;
+
+	&-content {
+		$el: &;
+		padding: 25px;
+		color: #f5f5f5;
+
+	}
+}

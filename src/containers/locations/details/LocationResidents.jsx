@@ -3,7 +3,6 @@ import './LocationResidents.scss';
 
 const LocationResidents = ({ residentsIds }) => {
 	const { characters } = useLocationResidents(residentsIds);
-	console.log(characters);
 
 	return (
 		<>

@@ -2,7 +2,6 @@ import { useQuery } from 'react-query';
 import { getSingleLocation } from 'api/location';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import '../details/LocationDetails.scss';
-
 import LocationResidents from './LocationResidents';
 
 const LocationDetails = () => {
@@ -31,9 +30,7 @@ const LocationDetails = () => {
 
 			{/* residents */}
 			<div className="location-details__residents">
-				<div className="location-details__residents-content">
-					<div className="location-details__residents-grid">{<LocationResidents residentsIds={residentsIds} />}</div>
-				</div>
+				<div className="location-details__residents-content">{<LocationResidents residentsIds={residentsIds} />}</div>
 			</div>
 		</>
 	);

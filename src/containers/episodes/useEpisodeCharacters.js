@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import { getMultipleCharacters } from 'api/character';
 
-export const useLocationResidents = (ids) => {
+const useEpisodeCharacters = (ids) => {
 	const { data: characters, status: charactersStatus } = useQuery(
 		['multiple-characters', ids],
 		async () => {
@@ -20,3 +20,5 @@ export const useLocationResidents = (ids) => {
 
 	return { characters, charactersStatus };
 };
+
+export default useEpisodeCharacters;
