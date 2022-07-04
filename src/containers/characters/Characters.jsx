@@ -1,4 +1,4 @@
-import './Characters.scss';
+import './characters.scss';
 import Character from './Character/Character';
 import { FormikProvider, useFormik } from 'formik';
 import FormikSelectField from 'components/form/FormikSelectField/FormikSelectField';
